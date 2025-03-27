@@ -1,0 +1,759 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Хедер */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #28a745;
+}
+
+.header__logo-img {
+    width: 70px;
+}
+
+.header__phone-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header-nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    justify-content: center; 
+}
+
+.header-nav-list li {
+    display: inline;
+}
+
+.header-nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.header-nav-list a:hover {
+    color: #dfffd6;
+}
+
+/* Блок с фоном */
+.hero {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url('/img/fon.png') no-repeat center center; 
+    background-size: cover;
+    color: white;
+    padding: 220px 20px;
+    text-align: center;
+}
+
+.hero__title {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero__text {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hero__button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff6600;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero__button:hover {
+    background-color: #cc5200;
+}
+
+/* Блок "Вакансия дня" */
+.vacancy-day {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Бегущая строка */
+.vacancy-day__scrolling {
+    width: 100%;
+    overflow: hidden; 
+    position: relative;
+}
+
+.vacancy-day__scrolling-text {
+    display: inline-block;
+    white-space: nowrap; 
+    font-size: 32px;
+    font-weight: bold;
+    color: #4CAF50; 
+    animation: scroll 30s linear infinite; 
+}
+
+.vacancy-day__scrolling p {
+    margin: 0;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0); 
+    }
+    100% {
+        transform: translateX(-50%); 
+    }
+}
+
+.vacancy-day__items {
+    display: flex;
+    justify-content: center; 
+    margin-top: 30px;
+    gap: 100px; 
+}
+
+.vacancy-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 320px; 
+    text-align: center;
+    transition: transform 0.3s ease; 
+    margin-bottom: 30px;
+}
+
+.vacancy-item:hover {
+    transform: scale(1.05); 
+}
+
+.vacancy-item__img {
+    width: 100%;
+    height: 220px; 
+    object-fit: cover;
+}
+
+.vacancy-item__content {
+    padding: 20px;
+}
+
+.vacancy-item__title {
+    font-size: 22px; 
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.vacancy-item__description {
+    font-size: 18px; 
+    color: #777;
+}
+
+.vacancy-day__title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #000000; 
+    margin-top: 30px; 
+    text-transform: uppercase; 
+}
+
+/* Блок "Преимущества" */
+.advantages {
+    background-color: #e9e9e9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.advantages__title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.advantages__items {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    gap: 20px; 
+}
+
+.advantages__item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 30%; 
+    text-align: left;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.advantages__item:hover {
+    transform: scale(1.05); 
+}
+
+.advantages__icon {
+    font-size: 40px;
+    margin-right: 15px;
+}
+
+.advantages__content {
+    flex: 1;
+}
+
+.advantages__subtitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.advantages__description {
+    font-size: 16px;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .advantages__item {
+        width: 48%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .advantages__item {
+        width: 100%; 
+    }
+}
+
+/* Блок "Присоединяйся к команде" */
+.join-team {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.join-team__title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+}
+
+.join-team__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; 
+}
+
+.join-team__item {
+    background-color: #e4ebec;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 15%; 
+    text-align: left;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    transition: transform 0.3s ease;
+    height: 250px; 
+}
+
+.join-team__item:hover {
+    transform: scale(1.05); 
+}
+
+.join-team__circle {
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 20px; 
+}
+
+.join-team__content {
+    text-align: center;
+    flex: 1;
+}
+
+.join-team__subtitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.join-team__description {
+    font-size: 16px;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .join-team__item {
+        width: 48%; 
+        height: auto; 
+    }
+}
+
+@media (max-width: 480px) {
+    .join-team__item {
+        width: 100%; 
+        height: auto;
+    }
+}
+
+/* Блок - Анкета */
+.form-section {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.form-section__title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form__label {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.form__input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.form__input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.form__consent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+.form__consent-label {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.form__checkbox {
+    margin-right: 10px;
+}
+
+.form__submit {
+    padding: 15px;
+    background-color: #49ff61;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form__submit:hover {
+    background-color: #32cc44;
+}
+
+/* Блок - Калькулятор */
+.earnings-section {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.earnings-section__title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.earnings-section__label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.earnings-section__select {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+.earnings-section__options {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.earnings-option {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+}
+
+.earnings-option__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.earnings-option__value {
+    font-size: 20px;
+    color: #4CAF50;
+    margin-bottom: 5px;
+}
+
+.earnings-option__hourly {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Блок - FAQ */
+.faq-section {
+    background-color: #28a745; 
+    color: white;
+    padding: 40px 20px;
+    border-radius: 8px;
+}
+
+.faq-section__title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    
+}
+
+.faq-contact {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    border-top: 2px solid white;
+    padding-top: 100px;
+    width: 50%;
+    margin: auto
+}
+
+.faq-contact__left,
+.faq-contact__right {
+    width: 48%; 
+}
+
+.faq-contact__title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    
+}
+
+.faq-contact__right-title {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.faq-contact p {
+    font-size: 16px;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.faq-contact__right ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.faq-contact__right li {
+    font-size: 16px;
+    font-weight: normal;
+    color: #e6e6e6;
+    margin-bottom: 7px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #fff;
+    position: relative;
+    width: 50%;
+    margin: auto;
+}
+
+.faq-item__question {
+    background-color: #28a745; 
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.faq-item__question:hover {
+    background-color: #218838; 
+}
+
+.faq-item__answer {
+    display: none;
+    padding: 15px;
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.faq-item__answer.show {
+    display: block;
+}
+
+/* Блок - Отзывы */
+.reviews-section {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.reviews-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.reviews-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.reviews-wrapper {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+    padding: 10px;
+}
+
+.review-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 250px;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.review-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.review-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.review-meta {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.review-text {
+    font-size: 16px;
+    color: #333;
+}
+
+.scroll-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 20px 25px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.scroll-btn.left {
+    left: -80px;
+}
+
+.scroll-btn.right {
+    right: -80px;
+}
+
+.scroll-btn:hover {
+    background: #388E3C;
+}
+
+/* Блок - Футер */
+.footer {
+    background-color: #28a745;
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    height: 50px;
+}
+
+.footer-nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.footer-nav-list li {
+    display: inline;
+}
+
+.footer-nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer-nav-list a:hover {
+    color: #dfffd6;
+}
+
+.footer-links {
+    text-align: right;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-links p {
+    margin: 5px 0 0;
+}
+
+/* Кнопка вверх */
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #388E3C; 
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: none; 
+    transition: background-color 0.3s ease-in-out;
+}
+
+.scroll-to-top-btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-135deg); 
+    width: 20px;
+    height: 20px;
+    border-right: 3px solid white; 
+    border-bottom: 3px solid white; 
+}
+
+.scroll-to-top-btn:hover {
+    background-color: rgba(0, 123, 255, 0.1); 
+}
+
+.scroll-to-top-btn:focus {
+    outline: none; 
+}
