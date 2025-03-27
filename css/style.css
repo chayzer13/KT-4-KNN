@@ -57,7 +57,7 @@ html {
 
 /* Блок с фоном */
 .hero {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url('../img/fon.png') no-repeat center center; 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../img/fon.png) no-repeat center center; 
     background-size: cover;
     color: white;
     padding: 220px 20px;
